@@ -46,7 +46,7 @@ while True:
     #nao permite valores iguais a zero ou negativos
     
          
-  elif opção == ("2"):
+  elif opção == "2":
     print (f"seu saldo atual é: R${Saldo:.2f}")
     valor= float(input("informe o valor do saque: "))
   #saca o valor
@@ -87,6 +87,7 @@ while True:
     #se atingiu a variável (excedeu saque) print e mostre o numero de saques ate agora e o limite de saque  
         
     elif valor > 0:
+      
       Saldo -= valor
       Extrato += f"saque: R$-{valor:.2f}\n"
       Numero_de_Saque += 1
@@ -98,6 +99,7 @@ while True:
       
     
   elif opção == "3":
+
     print("\n=========== EXTRATO============\n")
     print("não foram realizados movimentações." if not Extrato else Extrato)
     print(f"\nsaldo: R${Saldo:.2f}\n")
